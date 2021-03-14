@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<synthkit>
+    <drum synth="Drum Ks Basic 01.XML" name="" />
+    <drum synth="Drum Ks Dist 01.XML" name="" />
+    <drum synth="Drum Ks Basic Fm 01.XML" name="" />
+</synthkit>
