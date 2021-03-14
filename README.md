@@ -17,31 +17,36 @@ Reasoning: whilst you can manually build a KIT using the synthesis engine and yo
 
 Provding you have Python 3 and the corresponding Pip installer tools it should be a case of just doing:
 
-    python3 -m pip install skb
-
+```
+python3 -m pip install skb
+```
 ## Usage
 
 skb --sd-root 'path' --input-file 'path' --ouput-file 'path'
 
-    sd-root = full path to root of your mounted SD card e.g. /Volumes/DELUGE/
-    input-file = name of XML file which describes your KIT contents (see below)
-    output-file = name of the generated KIT file, including .XML extension
+```
+sd-root = full path to root of your mounted SD card e.g. /Volumes/DELUGE/
+input-file = name of XML file which describes your KIT contents (see below)
+output-file = name of the generated KIT file, including .XML extension
+```
 
 XML Kit File
 
 In order to tell the tool which SYNTH patches you want in your KIT, you need to create a basic XML file e.g.
 
-    ```XML
-    <?xml version='1.0' encoding='UTF-8'?>
-    <synthkit>
-        <drum synth="KICK.XML" name="BIG KICK" />
-        <drum synth="SNARE.XML" name="" />
-        <drum synth="CLAP.XML" name="" />
-    </synthkit>
-    ```
+```XML
+<?xml version='1.0' encoding='UTF-8'?>
+<synthkit>
+    <drum synth="KICK.XML" name="BIG KICK" />
+    <drum synth="SNARE.XML" name="" />
+    <drum synth="CLAP.XML" name="" />
+</synthkit>
+```
 
-    synth = filename of the SYNTH patch you'd like to load into the KIT LANE
-    name = optional name to display in the KIT LANE, if blank ("") the filename is used
+```
+synth = filename of the SYNTH patch you'd like to load into the KIT LANE
+name = optional name to display in the KIT LANE, if blank ("") the filename is used
+```
 
 NOTE:
 
