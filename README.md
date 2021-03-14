@@ -17,22 +17,37 @@ Reasoning: whilst you can manually build a KIT using the synthesis engine and yo
 
 Provding you have Python 3 and the corresponding Pip installer tools it should be a case of just doing:
 
-```
+```Text
 python3 -m pip install skb
 ```
+
 ## Usage
+
+Example"
+
+```Text
+skb --sd-root '/Volumes/DELUGE32/' --input-file 'kitfile.xml' --output-file skb.XML
+```
 
 skb --sd-root 'path' --input-file 'path' --ouput-file 'path'
 
-```
+```Text
 sd-root = full path to root of your mounted SD card e.g. /Volumes/DELUGE/
+
 input-file = name of XML file which describes your KIT contents (see below)
+
 output-file = name of the generated KIT file, including .XML extension
 ```
 
-XML Kit File
+## XML Kit File
 
 In order to tell the tool which SYNTH patches you want in your KIT, you need to create a basic XML file e.g.
+
+The script will create the KIT in reverse order meaning the first synth in your XML will be the lowest row etc.
+
+You can specify the same SYNTH more than once and theoretically there should be no (reasonable) limite to how many lanes you can generate.
+
+It's probably worth pointing out that any editing or changes you make to the generated kit on the Deluge will not be reflected in the original SYNTH patches. That's probably a good thing though!
 
 ```XML
 <?xml version='1.0' encoding='UTF-8'?>
@@ -43,8 +58,9 @@ In order to tell the tool which SYNTH patches you want in your KIT, you need to 
 </synthkit>
 ```
 
-```
+```Text
 synth = filename of the SYNTH patch you'd like to load into the KIT LANE
+
 name = optional name to display in the KIT LANE, if blank ("") the filename is used
 ```
 
