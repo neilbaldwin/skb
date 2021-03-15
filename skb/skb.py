@@ -62,25 +62,8 @@ def main():
     )
 
     # Parse command line
-    parser = argparse.ArgumentParser(description="""
-        SKB Deluge Synth Kit Builder.
-
-        Script to create a KIT from SYNTH files on your Deluge SD card.
-
-        You must specify the path to the root of your SD card e.g.
-
-        '/Volumes/DELUGE' on OSX
-        'E:/DELUGE' on Windows
-
-        You need to create an XML text file (see example included) to describe the kit.
-
-        Then run the script using the SD root path and Kit XML file as options,
-        along with the output filename of the Deluge XML KIT file.
-
-        The assumption is that your SD card contains SYNTHS and KITS folers in the root path
-        as this is where the script will look for SYNTH patches and output the KIT.
-    """
-    )
+    parser = argparse.ArgumentParser()
+        
     parser.add_argument('--sd-root', action='store', dest='sd_root', required=True,
         help='The path to the root of your SD card e.g. /Volumes/DELUGE')
     parser.add_argument('--input-file', action='store', dest='input_file', required=True,
@@ -132,3 +115,7 @@ def main():
 
     with open(outputFilePath, 'w') as outputFile:
         outputFile.write(outputxml)
+
+
+if __name__ == "__main__":
+   main()
