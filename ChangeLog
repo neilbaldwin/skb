@@ -1,26 +1,11 @@
 CHANGES
 =======
 
+* Fixed broken folder structure!
 * Fixed typo in package name
-
-v1.0.5
-------
-
 * Corrected first release
-
-v1.0.3
-------
-
 * Corrected first release
-
-v1.0.0
-------
-
 * Minor changes
-
-v0.0.3
-------
-
 * Bump version: 1.0.1 → 1.0.2
 * Parseargs error fixed
 * Fixed requirements.txt, V1.0.1
