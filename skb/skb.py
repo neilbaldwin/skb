@@ -3,6 +3,8 @@ import argparse
 import lxml.builder as xb
 from lxml import etree
 
+import importlib.metadata
+
 def main():
 
     # XML builder template for empty Deluge KIT

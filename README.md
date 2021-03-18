@@ -1,10 +1,10 @@
 # SKB - Synth Kit Builder for Synthstrom Deluve
 
-A Python utility for building KITS (drum kits) for the Synthstrom Deluge.
+A Python utility for the Synthstrom Deluge, used for building KITS (drum kits) from existing SYNTH sounds.
 
 ## Motivation
 
-Reasoning: whilst you can manually build a KIT using the synthesis engine and you can build a KIT by loadinging one or more samples into a KIT LANE, it's not possible, as of Firmware 3.1.5, to load SYNTH files into KIT LANES. I wrote this utility to enable you do do just that.
+Reasoning: whilst you can manually create a KIT using the synthesis engine and you can build a KIT by loadinging one or more samples into a KIT LANE, it's not possible, as of Firmware 3.1.5, to load SYNTH files into KIT LANES. I wrote this utility to enable you to do just that.
 
 ## Requirements
 
@@ -58,11 +58,15 @@ It's probably worth pointing out that any editing or changes you make to the gen
 </synthkit>
 ```
 
+For each 'drum' node there are two attributes
+
 ```Text
 synth = filename of the SYNTH patch you'd like to load into the KIT LANE
 
-name = optional name to display in the KIT LANE, if blank ("") the filename is used
+name = optional name to display in the KIT LANE, see below
 ```
+
+If no 'name' is specified (i.e. "") then the script will create a name from the SYNTH filename.
 
 NOTE:
 

@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+* Fixed broken install
+
+v1.0.7
+------
+
 * Fixed broken folder structure!
 * Fixed typo in package name
 * Corrected first release
