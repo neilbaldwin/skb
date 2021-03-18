@@ -1,4 +1,4 @@
-# SKB - Synth Kit Builder for Synthstrom Deluve
+# SKB - Synth Kit Builder for Synthstrom Deluge
 
 A Python utility for the Synthstrom Deluge, used for building KITS (drum kits) from existing SYNTH sounds.
 
@@ -23,13 +23,13 @@ python3 -m pip install skb
 
 ## Usage
 
-Example"
+skb --sd-root 'path' --input-file 'filemame' --ouput-file 'filename'
+
+Example:
 
 ```Text
 skb --sd-root '/Volumes/DELUGE32/' --input-file 'kitfile.xml' --output-file skb.XML
 ```
-
-skb --sd-root 'path' --input-file 'path' --ouput-file 'path'
 
 ```Text
 sd-root = full path to root of your mounted SD card e.g. /Volumes/DELUGE/
@@ -42,12 +42,6 @@ output-file = name of the generated KIT file, including .XML extension
 ## XML Kit File
 
 In order to tell the tool which SYNTH patches you want in your KIT, you need to create a basic XML file e.g.
-
-The script will create the KIT in reverse order meaning the first synth in your XML will be the lowest row etc.
-
-You can specify the same SYNTH more than once and theoretically there should be no (reasonable) limite to how many lanes you can generate.
-
-It's probably worth pointing out that any editing or changes you make to the generated kit on the Deluge will not be reflected in the original SYNTH patches. That's probably a good thing though!
 
 ```XML
 <?xml version='1.0' encoding='UTF-8'?>
@@ -67,6 +61,13 @@ name = optional name to display in the KIT LANE, see below
 ```
 
 If no 'name' is specified (i.e. "") then the script will create a name from the SYNTH filename.
+
+The script will create the KIT in reverse order meaning the first synth in your XML will be the lowest row etc.
+
+You can specify the same SYNTH more than once and theoretically there should be no (reasonable) limite to how many lanes you can generate.
+
+It's probably worth pointing out that any editing or changes you make to the generated kit on the Deluge will not be reflected in the original SYNTH patches. That's probably a good thing though!
+
 
 NOTE:
 
