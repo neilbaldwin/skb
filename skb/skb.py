@@ -2,11 +2,13 @@ import os
 import argparse
 import lxml.builder as xb
 from lxml import etree
+# from importlib.metadata import version
+from pbr.version import VersionInfo
 
-import importlib.metadata
+#__version__ = version('skb')
+__version__ = VersionInfo('skb').release_string()
 
 def main():
-
     # XML builder template for empty Deluge KIT
     kit_template = xb.E.kit (
         xb.E.delay(
@@ -66,12 +68,13 @@ def main():
     # Parse command line
     parser = argparse.ArgumentParser()
         
-    parser.add_argument('--sd-root', action='store', dest='sd_root', required=True,
+    parser.add_argument('--sd-root', action='store', required=True,
         help='The path to the root of your SD card e.g. /Volumes/DELUGE')
     parser.add_argument('--input-file', action='store', dest='input_file', required=True,
-        help='XML file describing the kit to create. Run with -h for more detail.')
+        help='XML file describing the kit to create.')
     parser.add_argument('--output-file', action='store', dest='output_file', required=True,
         help='XML output file')
+    parser.add_argument('--version', action='version', version=__version__)
 
     args = parser.parse_args()
 
@@ -83,7 +86,7 @@ def main():
     try:
         kitfile = etree.parse(kitFilePath)
     except:
-        print("\nFile not found error\n\n")
+        print(f"\nInput file {kitFilePath} not found error\n\n")
         exit()
 
     # Find insertion point for individual sounds
@@ -93,9 +96,13 @@ def main():
     for drum in kitfile.iter('drum'):
         synthName = str(drum.attrib['synth'])
         inputFilePath = os.path.abspath(args.sd_root) + '/SYNTHS/' + synthName
-        with open(inputFilePath) as inputFile:
-            synthfile = inputFile.read()
-        
+        try:
+            with open(inputFilePath) as inputFile:
+                synthfile = inputFile.read()
+        except:
+            print(f"\nSynth \"{synthName}\" not found error\n\n")
+            exit()
+      
         # parse synth file from text
         synthxml = etree.fromstring(bytes(synthfile, encoding='utf-8'))
 
