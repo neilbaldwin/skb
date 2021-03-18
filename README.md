@@ -62,7 +62,7 @@ If no 'name' is specified (i.e. "") then the script will create a name from the 
 
 The script will create the KIT in reverse order meaning the first synth in your XML will be the lowest row etc.
 
-You can specify the same SYNTH more than once and theoretically there should be no (reasonable) limite to how many lanes you can generate.
+You can specify the same SYNTH more than once and theoretically there should be no (reasonable) limit to how many lanes you can generate.
 
 It's probably worth pointing out that any editing or changes you make to the generated kit on the Deluge will not be reflected in the original SYNTH patches. That's probably a good thing though!
 
