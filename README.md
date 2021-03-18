@@ -31,13 +31,11 @@ Example:
 skb --sd-root '/Volumes/DELUGE32/' --input-file 'kitfile.xml' --output-file skb.XML
 ```
 
-```Text
-sd-root = full path to root of your mounted SD card e.g. /Volumes/DELUGE/
+**sd-root** = full path to root of your mounted SD card e.g. /Volumes/DELUGE/
 
-input-file = name of XML file which describes your KIT contents (see below)
+**input-file** = name of XML file which describes your KIT contents (see below)
 
-output-file = name of the generated KIT file, including .XML extension
-```
+**output-file** = name of the generated KIT file, including .XML extension
 
 ## XML Kit File
 
@@ -67,7 +65,6 @@ The script will create the KIT in reverse order meaning the first synth in your 
 You can specify the same SYNTH more than once and theoretically there should be no (reasonable) limite to how many lanes you can generate.
 
 It's probably worth pointing out that any editing or changes you make to the generated kit on the Deluge will not be reflected in the original SYNTH patches. That's probably a good thing though!
-
 
 NOTE:
 
