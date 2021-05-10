@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* Changed input file from XML to plain text
 * Updated README.md
 * README typo fixes
 * Updated license file
