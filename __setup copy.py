@@ -8,7 +8,7 @@ long_description = "SKB - Synth Kit Builder for Synthstrom Deluge"
   
 setup( 
         name ='skb', 
-        version ='1.1.2', 
+        version ='1.2.0', 
         author ='Neil Baldwin', 
         author_email ='neil.baldwin@mac.com', 
         url ='https://github.com/neilbaldwin', 
