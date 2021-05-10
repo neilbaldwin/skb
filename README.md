@@ -28,39 +28,28 @@ skb --sd-root 'path' --input-file 'filemame' --ouput-file 'filename'
 Example:
 
 ```Text
-skb --sd-root '/Volumes/DELUGE32/' --input-file 'kitfile.xml' --output-file skb.XML
+skb --sd-root '/Volumes/DELUGE32/' --input-file 'kitfile.txt' --output-file skb.XML
 ```
 
 **sd-root** = full path to root of your mounted SD card e.g. /Volumes/DELUGE/
 
 **input-file** = name of XML file which describes your KIT contents (see below)
 
-**output-file** = name of the generated KIT file, including .XML extension
+**output-file** = name of the generated KIT file, plain text, one synth filename per line
 
 ## XML Kit File
 
-In order to tell the tool which SYNTH patches you want in your KIT, you need to create a basic XML file e.g.
-
-```XML
-<?xml version='1.0' encoding='UTF-8'?>
-<synthkit>
-    <drum synth="KICK.XML" name="BIG KICK" />
-    <drum synth="SNARE.XML" name="" />
-    <drum synth="CLAP.XML" name="" />
-</synthkit>
-```
-
-For each 'drum' node there are two attributes
+In order to tell the tool which SYNTH patches you want in your KIT, you need to create a text file e.g.
 
 ```Text
-synth = filename of the SYNTH patch you'd like to load into the KIT LANE
-
-name = optional name to display in the KIT LANE, see below
+KICK.XML
+SNARE.XML
+CLAP.XML
 ```
 
-If no 'name' is specified (i.e. "") then the script will create a name from the SYNTH filename.
+Do not include the full path e.g. /SYNTHS/KICK.XML - just specify the synth XML filename.
 
-The script will create the KIT in reverse order meaning the first synth in your XML will be the lowest row etc.
+The script will create the KIT in reverse order meaning the first synth in your text file will be the lowest row etc.
 
 You can specify the same SYNTH more than once and theoretically there should be no (reasonable) limit to how many lanes you can generate. For anyone wanting to build their own synth kits, this tool would be really handy as you could create, say, a kick drum synth patch that you're happy with and then load 16 copies of that into a KIT. Then you can tweak each one on the Deluge to give you a kit full of variation on the synthesis method.
 
