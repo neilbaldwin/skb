@@ -1,7 +1,6 @@
 
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
-from importlib.metadata import version
 import pathlib
 
 here = pathlib.Path(__file__).parent.resolve()
@@ -13,7 +12,7 @@ with open('requirements.txt') as f:
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
-        version ='1.2.3', 
+        version = "1.2.5",
         packages = find_packages(), 
         entry_points ={ 
             'console_scripts': [ 
