@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+v1.2.0
+------
+
+* Bump version: 1.1.1 → 1.2.0
+* Changed input file from XML to plain text
 * Changed input file from XML to plain text
 * Changed input file from XML to plain text
 

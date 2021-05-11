@@ -2,11 +2,11 @@ import os
 import argparse
 import lxml.builder as xb
 from lxml import etree
-# from importlib.metadata import version
-from pbr.version import VersionInfo
+from importlib.metadata import version
+# from pbr.version import VersionInfo
 
-#__version__ = version('skb')
-__version__ = VersionInfo('skb').release_string()
+__version__ = version('skb')
+#__version__ = VersionInfo('skb').release_string()
 
 class kitBuilder:
     def __init__(self):
