@@ -12,7 +12,7 @@ with open('requirements.txt') as f:
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
-        version = "1.2.5",
+        version = "1.2.4",
         packages = find_packages(), 
         entry_points ={ 
             'console_scripts': [ 
