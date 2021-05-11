@@ -6,7 +6,7 @@ from lxml import etree
 #from importlib.metadata import version
 #__version__ = version('skb')
 
-__version__ = "1.2.3"
+__version__ = "1.2.4"
 
 class kitBuilder:
     def __init__(self):
