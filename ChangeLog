@@ -1,6 +1,10 @@
 CHANGES
 =======
 
+v1.2.9
+------
+* Moved project to Poetry build system and cleaned up redundant files.
+
 v1.2.0
 ------
 
