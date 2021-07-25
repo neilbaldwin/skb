@@ -1,12 +1,10 @@
-
 import os
 import argparse
 import lxml.builder as xb
 from lxml import etree
+from skb import __version__
 
-__version__ = "1.2.5"
-
-class kitBuilder:
+class KitBuilder:
     def __init__(self):
         self.sdPath = ''
         self.kitName = ''
@@ -87,7 +85,6 @@ class kitBuilder:
         try:
             with open(kitFilePath) as inputFile:
                 self.addItems([line.rstrip() for line in inputFile])
-            
             return 0
 
         except:
@@ -95,9 +92,9 @@ class kitBuilder:
             return 1
 
 def main():
-
+    
     # Create new blank kit object
-    newKit = kitBuilder()
+    newKit = KitBuilder()
     parser = argparse.ArgumentParser()
         
     parser.add_argument('--sd-root', action='store', required=True,
