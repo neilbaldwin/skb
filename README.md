@@ -4,13 +4,13 @@ A Python utility for the Synthstrom Deluge, used for building KITS (drum kits) f
 
 ## Motivation
 
-Reasoning: whilst you can manually create a KIT using the synthesis engine and you can build a KIT by loadinging one or more samples into a KIT LANE, it's not possible, as of Firmware 3.1.5, to load SYNTH files into KIT LANES. I wrote this utility to enable you to do just that.
+Reasoning: whilst you can manually create a KIT using the synthesis engine and you can build a KIT by loading one or more samples into a KIT LANE, it's not possible, as of Firmware 3.1.5, to load SYNTH files into KIT LANES. I wrote this utility to enable you to do just that.
 
 ## Requirements
 
 - Latest Deluge firmware. At time of first release this is 3.1.5
 - The ability to mount your Deluge SD card in your computer and have read/write access
-- Python 3 plus Pip tools to install Paython packages
+- Python 3 plus Pip tools to install Python packages
 - familiarity with Python command-line tools
 
 ## Installation or Getting Started
@@ -18,7 +18,7 @@ Reasoning: whilst you can manually create a KIT using the synthesis engine and y
 Provding you have Python 3 and the corresponding Pip installer tools it should be a case of just doing:
 
 ```Text
-python3 -m pip install skb
+python3 -m pip install skb --upgrade
 ```
 
 ## Usage
